@@ -1,0 +1,35 @@
+'''
+	#FlaskIntent
+	#text = intent info
+	#var text = request.intent.slot.value
+	if request.type === 'IntentRequest':
+	if request.intent.name === 'FlaskIntent':
+	{
+		"version": '1.0',
+		"response": {
+			"outputSpeech" {
+				"type:" "PlainText",
+				"text": "command processed."
+			},
+			"shouldEndSession": true
+
+		}
+	}
+'''
+
+
+{
+  "intents": [
+    {
+		"intent": "FlaskIntent", 
+		"slots": [ { "name": "Text", "type": "ATYPE" } ] 
+    }
+  ]
+}
+
+Values
+
+""
+
+FlaskIntent {Text}
+

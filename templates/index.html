@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link href="static/stylesheet.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+  	<h2> The Alexa Chatroom </h2>
+  	<ol id="aList">
+    </ol>
+    <script>
+		var convo = '{{data}}';
+		convo = convo.split("|")
+		for (i = 0; i < convo.length; i++) {
+			convo[i] = convo[i].split(",");
+		}
+		for (i = 0; i < convo.length; i++) {
+            var el = document.createElement("LI");                
+			var textNode = document.createTextNode("Person " + convo[i][0] + " said: " + convo[i][1]);        
+			el.appendChild(textNode);                              
+			document.getElementById("aList").appendChild(el); 
+       	}    
+	</script>
+  </body>
+</html>
+
